@@ -1,12 +1,18 @@
 #' Control Chart
 #'
-#' This function plots a control chart for monitoring a production process for a product with a continuous measure (e.g., weight of a package).
+#' This function plots a control chart for monitoring a production process for a product with a continuous measure (e.g., weight of a package). It uses the base plotting system.
 #'
-#'@param chartdata The name of the variable to be plotted.
-#'@param mu The anticipated mean when the production process is working properly.
-#'@param sig The anticipated standard deviation when the process is working properly.
-#'@param n The number of observations per sample.
-#'@param alpha The significance level.
+#'@param chartdata The name of the variable to be plotted. A vector or a 1-column matrix. Cannot be a dataframe, tibble, or list object.
+#'@param mu The anticipated mean when the production process is working properly. A number.
+#'@param sig The anticipated standard deviation when the process is working properly. A number.
+#'@param n The number of observations per sample. A number.
+#'@param alpha The significance level. A number.
+#'@return A control chart plot
+#'@examples
+#'\dontrun{
+#' vars <- rnorm(10)
+#' controlChart(vars, mu = 0, sig = 1, n = 10, alpha = 0.05)
+#'}
 #'@export
 
 controlChart <- function(chartdata, mu, sig, n, alpha) {

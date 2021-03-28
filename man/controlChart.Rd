@@ -7,16 +7,25 @@
 controlChart(chartdata, mu, sig, n, alpha)
 }
 \arguments{
-\item{chartdata}{The name of the variable to be plotted.}
+\item{chartdata}{The name of the variable to be plotted. A vector or a 1-column matrix. Cannot be a dataframe, tibble, or list object.}
 
-\item{mu}{The anticipated mean when the production process is working properly.}
+\item{mu}{The anticipated mean when the production process is working properly. A number.}
 
-\item{sig}{The anticipated standard deviation when the process is working properly.}
+\item{sig}{The anticipated standard deviation when the process is working properly. A number.}
 
-\item{n}{The number of observations per sample.}
+\item{n}{The number of observations per sample. A number.}
 
-\item{alpha}{The significance level.}
+\item{alpha}{The significance level. A number.}
+}
+\value{
+A control chart plot
 }
 \description{
-This function plots a control chart for monitoring a production process for a product with a continuous measure (e.g., weight of a package).
+This function plots a control chart for monitoring a production process for a product with a continuous measure (e.g., weight of a package). It uses the base plotting system.
+}
+\examples{
+\dontrun{
+vars <- rnorm(10)
+controlChart(vars, mu = 0, sig = 1, n = 10, alpha = 0.05)
+}
 }

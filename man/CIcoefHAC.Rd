@@ -7,7 +7,7 @@
 CIcoefHAC(linmod, alpha = 0.05)
 }
 \arguments{
-\item{linmod}{The regression for which confidence intervals of coefficients are to be calculated.}
+\item{linmod}{The regression for which confidence intervals of coefficients are to be calculated. An object of class "lm" or one that can be coerced to that class.}
 
 \item{alpha}{Significance level. Defaults to 0.05.}
 }

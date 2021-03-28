@@ -26,6 +26,7 @@ Imports:
     EnvStats,
     pwrAB,
     plot3D,
+    magrittr,
     margins,
     lift,
     StatMeasures,
